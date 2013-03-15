@@ -1,5 +1,5 @@
 {
-  "name": "webclient"
+  "name": "mixmaster"
   ,"description": "A utility class for multiple inheritance in Coffeescript using mixins."
   ,"keywords": [
     "coffee-script"
