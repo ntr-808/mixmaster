@@ -1,0 +1,28 @@
+{
+  "name": "webclient"
+  ,"description": "A utility class for multiple inheritance in Coffeescript using mixins."
+  ,"keywords": [
+    "coffee-script"
+    ,"mixmaster"
+    ,"mixins"
+  ]
+  ,"version": "0.1.0"
+  ,"author": {
+    "name": "Nathan Rashleigh",
+    "email": "nathanr@smokestack.io",
+    "url": "http://smokestack.io"
+  }
+  ,"main": "./mixmaster.coffee"
+  ,"engines": {
+    "node": "*"
+  }
+  ,"repository": {
+    "type": "git",
+    "url": "https://github.com/margh/mixmaster.git"
+  }
+  ,"licenses": [
+    {
+      "type": "WTFPL"
+    }
+  ]
+}

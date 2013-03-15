@@ -17,8 +17,8 @@ To make a Mixmastered class:
       ]
       @include mixins
 
-      constructor: (worldNews, args...) ->
-        Mixmaster.init mixins, worldNews, args...
+      constructor: ->
+        Mixmaster.init mixins
 
     linguist = new Translator
 
@@ -75,3 +75,7 @@ Instantiate as normal...
     linguist.greeting() # Hi!
     console.log worldNews # { germany: 'good news',
                           #   japan: { news: 'bad news', weather: 'great' } }
+
+
+
+### [WTFPL](http://wtfpl.org/)
