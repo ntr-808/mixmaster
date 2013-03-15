@@ -13,7 +13,10 @@ class Japanese
   constructor: (worldNews, weather) ->
     console.log 'Hard times in Japan today...'
     console.log "...but the weather was #{weather}."
-    worldNews.japan = 'bad news'
+    worldNews.japan = {
+      news: 'bad news'
+      weather: weather
+    }
 
   japanese: -> console.log 'こんにちは'
 
@@ -55,4 +58,5 @@ linguist.german() # Guten Tag
 linguist.japanese() # こんにちは
 linguist.writePaper() # My paper is on ...jargon jargon...
 linguist.greeting() # Hi!
-console.log worldNews # { germany: 'good news', japan: 'bad news' }
+console.log worldNews # { germany: 'good news',
+                      #   japan: { news: 'bad news', weather: 'great' } }
