@@ -11,6 +11,7 @@ class German
 
 class Japanese
   constructor: (worldNews, weather) ->
+    @region = 'Kansai'
     console.log 'Hard times in Japan today...'
     console.log "...but the weather was #{weather}."
     worldNews.japan = {
@@ -30,7 +31,7 @@ class English extends Mixmaster
   mixins = [LinguistJargon]
   @include mixins
 
-  greeting: -> console.log "Hi!"
+  greeting: -> console.log "Hi from #{@nationality}"
 
 # Add it all together...
 class Translator extends Mixmaster
@@ -45,7 +46,8 @@ class Translator extends Mixmaster
   # you will need to add the args splat and pass them through to Mixmaster's
   # init function so it will give them to the constructors.
   constructor: (worldNews, args...) ->
-    Mixmaster.init mixins, worldNews, args...
+    @nationality = 'Australia'
+    Mixmaster.construct this, mixins, worldNews, args...
 
 # Instantiate as normal!
 #
@@ -53,10 +55,9 @@ worldNews = {}
 weather = 'great'
 linguist = new Translator worldNews, weather
 
-
 linguist.german() # Guten Tag
 linguist.japanese() # こんにちは
 linguist.writePaper() # My paper is on ...jargon jargon...
-linguist.greeting() # Hi!
+linguist.greeting() # Hi from Australia
 console.log worldNews # { germany: 'good news',
                       #   japan: { news: 'bad news', weather: 'great' } }

@@ -6,13 +6,13 @@
     ,"mixmaster"
     ,"mixins"
   ]
-  ,"version": "0.1.1"
+  ,"version": "0.1.5"
   ,"author": {
     "name": "Nathan Rashleigh",
     "email": "nathanr@smokestack.io",
     "url": "http://smokestack.io"
   }
-  ,"main": "./mixmaster.coffee"
+  ,"main": "./lib/mixmaster.js"
   ,"engines": {
     "node": "*"
   }

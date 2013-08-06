@@ -1,9 +1,9 @@
 # Mixmaster
 
-v0.1.1
+v0.1.3
 
 A class for faking multiple inheritance in Coffeescript using mixins.
-Mixmaster also provides a function (init) for running the constructors of all your
+Mixmaster also provides a function (construct) for running the constructors of all your
 mixin classes.
 
 
@@ -18,7 +18,7 @@ To make a Mixmastered class:
       @include mixins
 
       constructor: ->
-        Mixmaster.init mixins
+        Mixmaster.construct mixins
 
     linguist = new Translator
 
@@ -36,7 +36,7 @@ You can inherit from basic classes.
       greeting: -> console.log 'Hallo.'
 
 
-You can see `Mixmaster.init` is called above with an `args...` splat.
+You can see `Mixmaster.construct` is called above with an `args...` splat.
 This is so your parent classes will receive any extra parameters they might need:
 
     class Japanese
@@ -50,7 +50,7 @@ This is so your parent classes will receive any extra parameters they might need
 
 You can override methods found in other inherited clases
 by adding the class later in the mixin array.
-As long as you are running `Mixmaster.init` in your constructors you can also inherit from other Mixmaster classes:
+As long as you are running `Mixmaster.construct` in your constructors you can also inherit from other Mixmaster classes:
 
     class LinguistJargon
       writePaper: -> console.log 'My paper is on ...jargon jargon...'

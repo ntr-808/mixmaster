@@ -2,11 +2,14 @@ module.exports = class Mixmaster
   @include: (mixins) ->
     for mixin in mixins
       for key, value of mixin.prototype
-        if @::[key]? and key isnt 'constructor'
-          console.warn "Overwriting #{key}..."
+        if @::[key]?
+          if key in ['constructor']
+            # console.log 'Not overwriting reserved property:', key
+            continue
+          console.log "Overwriting #{key}..."
         @::[key] = value
       this
 
-  @init: (mixins, args...) ->
+  @construct: (object, mixins, args...) ->
     for mixin in mixins
-      mixin.call this, args...
+      mixin.call object, args...
