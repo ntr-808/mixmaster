@@ -6,7 +6,7 @@ module.exports = class Mixmaster
           if key in ['constructor']
             # console.log 'Not overwriting reserved property:', key
             continue
-          console.log "Overwriting #{key}..."
+          # console.log "Overwriting #{key}..."
         @::[key] = value
       this
 
